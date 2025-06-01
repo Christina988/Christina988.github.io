@@ -1,0 +1,36 @@
+title {
+    color: mediumblue;
+    font-size: large;
+    font-family: 'Times New Roman'
+}
+h1 {
+    color: #f2fff1;
+    font-family: 'Times New Roman';
+    border-bottom: 4px solid #89c8a4;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    text-indent: 1em;
+}
+a {
+    margin: 10px;
+    font-size: 18px;
+    color:rgb(230, 255, 230);
+    text-decoration: none;
+}
+p {
+    text-indent: 2em;
+}
+body {
+    background: linear-gradient(to bottom, #275040, #061018 );
+    font-family: 'Times New Roman';
+    font-size: 18px;
+    padding: 40px;
+    min-height: 100vh;
+    margin: 10px;
+    color:rgb(198, 252, 198)
+}
+.symbol {
+    font-size:12px;
+    color: #8ecca9;
+    margin-right:10px;
+}
