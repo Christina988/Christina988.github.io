@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Oops! You weren't supposed to see this.</title>
+        <style> 
+        #container{
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            margin: auto;
+            }
+            #fourohfour{ 
+                position:absolute;
+                top: 65%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 7;
+                opacity: .5;
+                    outline: solid;
+                    outline-offset:0px;
+                    outline-color: rgb(242, 255, 241);
+                    outline-width: 4px;
+                    border-radius: 5px;
+            }
+            #fourohfour span{
+                color: rgb(242, 255, 241);
+                font-size: 14em;
+                font-weight: bold;
+                
+            }
+            #message{
+                position:absolute;
+                top: 15%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+                color: rgb(242, 255, 241);
+                font-size: 2em;
+                font-weight: bold;
+                text-align: center;
+            }
+            #plantsbackground{
+                position: absolute;
+                top: 65%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 5;
+                opacity: .5;
+                filter: hue-rotate(350deg)
+            }
+            #vinesfore{
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 15;
+                filter: brightness(60%) hue-rotate(40deg);
+            
+               
+                
+            }
+         /*the translate line allows for a true center rather than having
+            a corner of the box in the center*/
+            
+        </style>
+        
+        
+    </head>
+    <body>
+    <div id="container">
+        <div id="fourohfour">
+            <span>404</span>
+        </div>
+        <img src=Images/plants%20(1).PNG
+             alt="Dark Plants"
+             width= 550px
+             height= 350
+             id= "plantsbackground"
+             >
+        <img src="Images/transparentvines.png"
+            alt="Plants"
+            width= 550px
+            height= 290px
+            id= "vinesfore"
+             >
+        <div id="message">
+       Oops! You aren't supposed to see this yet!<br>
+           <a href="index.html">Click here to go back to the Index.</a>
+        </div>
+      
+        </div>
+    </body>
+</html>
