@@ -24,6 +24,8 @@ body {
     min-height: 100vh;
     margin: 10px;
     color:rgb(198, 252, 198)
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .symbol {
     font-size:12px;
