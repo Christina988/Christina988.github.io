@@ -118,31 +118,49 @@ h1 {
     z-index: 2;
 }
 
-/* Hamburger lines in top-right corner */
+.menu-lines {
+  position: absolute;
+  top: 0; /* or your preferred top */
+  right: 0; /* keep it pinned to the top-right */
+  width: 60px; /* enough width to contain the lines */
+  height: 60px; /* enough height for all 3 lines */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-lines:hover {
+  transform: scale(1.2);
+}
+
 .menu-lines .line {
-    width: 30px;
-    height: 3px;
-    background-color: #eafff6;
-    position: absolute;
-    right: 20px;
-    z-index: 2;
+  width: 30px;
+  height: 3px;
+  background-color: #eafff6;
+  position: absolute;
+  right: 20px; /* positions lines inside container */
+  z-index: 2;
 }
 
 .line1 { top: 30px; }
 .line2 { top: 40px; }
 .line3 { top: 50px; }
 
+
 /* Home text near hamburger lines */
 .home-text {
     position: absolute;
+    text-decoration: none;
     top: 30px;
     right: 70px;
     font-size: 20px;
     color: #eafff6;
     margin: 0;
     z-index: 2;
+    cursor: pointer;
+  transition: transform 0.3s ease;
 }
-
+.home-text:hover {
+  transform: scale(1.2);
 /* ----------- Responsive Styles for screens under 600px ----------- */
 @media only screen and (max-width: 600px) {
     /* 2 columns on small screens */
@@ -196,14 +214,18 @@ h1 {
 /* Home text near hamburger lines */
 .home-text {
     position: absolute;
+    text-decoration: none;
     top: 30px;
     right: 70px;
     font-size: 20px;
     color: #eafff6;
     margin: 0;
     z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
-
+.home-text:hover {
+  transform: scale(1.2);
 
     /* Reduce body padding */
     body {
