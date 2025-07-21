@@ -1,36 +1,209 @@
+/* Page Border Behind Everything using inset box-shadow */
+.page-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 30px; /* controls the inside curve */
+    box-shadow: inset 0 0 0 10px #1c2a26; /* thick inner border */
+    pointer-events: none;
+    z-index: 0;
+}
+.outline {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 30px);
+    border: 30px solid #1c2a26; /* thicker border */
+    border-radius: 35px;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 0;
+}
 
-h1 {
-    color:rgb(242, 255, 241);
-    font-family: 'Times New Roman';
-    border-bottom: 4px solid #89c8a4;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-    text-indent: 1em;
-}
-a {
-    margin: 10px;
-    font-size: 18px;
-    color:rgb(198, 252, 198);
-    text-decoration: none;
-}
-p {
-    text-indent: 2em;
-     font-size: 18px;
-    color:rgb(198, 252, 198);
-}
+/* Body styling with background and content area */
 body {
-    background: linear-gradient(to bottom, #275040, #061018 );
+    background: linear-gradient(to bottom, #275040, #061018);
+    background-color: #003425;
     font-family: 'Times New Roman';
     font-size: 18px;
     padding: 40px;
     min-height: 100vh;
     margin: 10px;
-    color:rgb(198, 252, 198)
+    color: #eafff6;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 }
+
+/* Centered heading with border */
+h1 {
+    color: #eafff6;
+    font-family: 'Times New Roman';
+    border-bottom: 4px solid #89c8a4;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-indent: 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Index grid layout */
+.index-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    grid-auto-flow: row;
+}
+
+/* Index items styling - flex to keep symbol and link inline */
+.index-grid p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    color: #eafff6;
+    width: auto;
+}
+
+/* Links inside index items */
+.index-grid a {
+    color: #eafff6;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Symbol next to links */
 .symbol {
-    font-size:12px;
-    color:rgb(142, 204, 169);
-    margin-right:10px;
+    font-size: 12px;
+    color: rgb(142, 204, 169);
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Top-left corner square */
+.corner-square {
+    width: 40px;
+    height: 40px;
+    background-color: #eafff6;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+/* Katie text next to square */
+.corner-name {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    font-size: 20px;
+    color: #eafff6;
+    margin: 0;
+    z-index: 2;
+}
+
+/* Hamburger lines in top-right corner */
+.menu-lines .line {
+    width: 30px;
+    height: 3px;
+    background-color: #eafff6;
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+}
+
+.line1 { top: 30px; }
+.line2 { top: 40px; }
+.line3 { top: 50px; }
+
+/* Home text near hamburger lines */
+.home-text {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    font-size: 20px;
+    color: #eafff6;
+    margin: 0;
+    z-index: 2;
+}
+
+/* ----------- Responsive Styles for screens under 600px ----------- */
+@media only screen and (max-width: 600px) {
+    /* 2 columns on small screens */
+    .index-grid {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    /* Fixed width for index items on small screens */
+    .index-grid p {
+        width: 75px;
+    }
+
+    /* Heading font size smaller */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Smaller corner square and position */
+    .corner-square {
+      width: 40px;
+    height: 40px;
+    background-color: #eafff6;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    }
+
+    /* Adjust Katie text position and size */
+    .corner-name {
+        top: 30px;
+        left: 70px;
+        font-size: 20px;
+    }
+
+    /* Hamburger lines in top-right corner */
+.menu-lines .line {
+    width: 30px;
+    height: 3px;
+    background-color: #eafff6;
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+}
+
+.line1 { top: 30px; }
+.line2 { top: 40px; }
+.line3 { top: 50px; }
+
+/* Home text near hamburger lines */
+.home-text {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    font-size: 20px;
+    color: #eafff6;
+    margin: 0;
+    z-index: 2;
+}
+
+
+    /* Reduce body padding */
+    body {
+        padding: 20px;
+    }
 }
