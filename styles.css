@@ -22,6 +22,17 @@
     pointer-events: none;
     z-index: 0;
 }
+
+.link {
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    color: #eafff6;
+}
+.link:hover {
+    transform: scale(1.05);
+}
+
 .image {
     width: 300px;
     margin-left: 20px
