@@ -13,8 +13,8 @@ body {
 }
 
 #sketch-container {
-  margin-top: 35px; /* or more */
-  text-align: center; /* optional: center horizontally */
+  margin-top: 35px;
+  text-align: center; 
 }
 
 body {
@@ -37,7 +37,7 @@ body {
     color: #eafff6;
 }
 
-/* === BORDERS & OUTLINES === */
+
 .page-outline {
     position: absolute;
     top: 0;
@@ -85,7 +85,7 @@ body {
     z-index: 2;
 }
 
-/* === MENU LINES (HAMBURGER ICON) === */
+
 .menu-lines {
     position: absolute;
     top: 0; 
@@ -153,7 +153,7 @@ h1 {
     margin-right: auto;
 }
 
-/* === GRID NAVIGATION === */
+
 .index-grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -179,7 +179,7 @@ h1 {
     width: 100%;
 }
 
-/* === SYMBOL NEXT TO LINKS === */
+
 .symbol {
     font-size: 12px;
     color: rgb(142, 204, 169);
@@ -188,7 +188,7 @@ h1 {
     vertical-align: middle;
 }
 
-/* === INTERACTIVE LINKS === */
+
 .link {
     cursor: pointer;
     text-decoration: underline;
@@ -200,7 +200,7 @@ h1 {
     transform: scale(1.05);
 }
 
-/* === UTILITY CLASSES === */
+
 .image {
     width: 300px;
     margin-left: 20px;
