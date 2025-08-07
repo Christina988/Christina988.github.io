@@ -1,55 +1,11 @@
-
-.page-outline {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 30px; 
-    box-shadow: inset 0 0 0 10px #1c2a26; 
-    pointer-events: none;
-    z-index: 0;
+@font-face{
+    font-family: 'Lobster';
+    src: url('lobsterbold.woff') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
-.outline {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: calc(100% + 40px);
-    height: calc(100% + 30px);
-    border: 30px solid #1c2a26;
-    border-radius: 35px;
-    box-sizing: border-box;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.link {
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    color: #eafff6;
-}
-.link:hover {
-    transform: scale(1.05);
-}
-
-.image {
-    width: 300px;
-    margin-left: 20px
-}
-.indented {
-  text-indent: 2em;  
-}
-.download {
-    font-size: 15pt;
-    font-family: 'Times New Roman';
-    color: #eafff6;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-}
-.download:hover {
-  transform: scale(1.05);
+body {
+  font-family: 'Times New Roman', serif;
 }
 
 body {
@@ -68,9 +24,112 @@ body {
     z-index: 1;
 }
 
+
+
+/* === BORDERS & OUTLINES === */
+.page-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px; 
+    box-shadow: inset 0 0 0 10px #1c2a26; 
+    pointer-events: none;
+    z-index: 0;
+}
+
+.outline {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 30px);
+    border: 30px solid #1c2a26; 
+    border-radius: 35px;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* === CORNER SQUARE AND NAME === */
+.corner-square {
+    width: 40px;
+    height: 40px;
+    background-color: #eafff6;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.corner-name {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    font-size: 20px;
+    color: #eafff6;
+    margin: 0;
+    z-index: 2;
+}
+
+/* === MENU LINES (HAMBURGER ICON) === */
+.menu-lines {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    width: 60px; 
+    height: 60px; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-lines:hover {
+    transform: scale(1.05);
+}
+
+.menu-lines .line {
+    width: 30px;
+    height: 3px;
+    background-color: #eafff6;
+    position: absolute;
+    right: 20px; 
+    z-index: 2;
+}
+
+.line1 { top: 30px; }
+.line2 { top: 40px; }
+.line3 { top: 50px; }
+
+.home-text {
+    position: absolute;
+    text-decoration: none;
+    top: 30px;
+    right: 70px;
+    font-size: 20px;
+    color: #eafff6;
+    margin: 0;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.home-text:hover {
+    transform: scale(1.05);
+}
+
+.hover-enlarge {
+    transition: transform 0.3s ease;
+}
+
+.hover-enlarge:hover {
+    transform: scale(1.05);
+}
+
 h1 {
     color: #eafff6;
-    font-family: 'Times New Roman';
+    font-family: 'Lobster';
     border-bottom: 4px solid #89c8a4;
     padding-bottom: 10px;
     padding-top: 30px;
@@ -82,6 +141,7 @@ h1 {
     margin-right: auto;
 }
 
+/* === GRID NAVIGATION === */
 .index-grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -107,6 +167,7 @@ h1 {
     width: 100%;
 }
 
+/* === SYMBOL NEXT TO LINKS === */
 .symbol {
     font-size: 12px;
     color: rgb(142, 204, 169);
@@ -115,141 +176,61 @@ h1 {
     vertical-align: middle;
 }
 
-.corner-square {
-    width: 40px;
-    height: 40px;
-    background-color: #eafff6;
-    border-radius: 15px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-}
-
-.corner-name {
-    position: absolute;
-    top: 30px;
-    left: 70px;
-    font-size: 20px;
-    color: #eafff6;
-    margin: 0;
-    z-index: 2;
-}
-
-.menu-lines {
-  position: absolute;
-  top: 0; 
-  right: 0; 
-  width: 60px; 
-  height: 60px; 
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.menu-lines:hover {
-  transform: scale(1.04);
-}
-
-.menu-lines .line {
-  width: 30px;
-  height: 3px;
-  background-color: #eafff6;
-  position: absolute;
-  right: 20px; 
-  z-index: 2;
-}
-
-.line1 { top: 30px; }
-.line2 { top: 40px; }
-.line3 { top: 50px; }
-
-
-.home-text {
-    position: absolute;
-    text-decoration: none;
-    top: 30px;
-    right: 70px;
-    font-size: 20px;
-    color: #eafff6;
-    margin: 0;
-    z-index: 2;
+/* === INTERACTIVE LINKS === */
+.link {
     cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.home-text:hover {
-  transform: scale(1.05);
+    text-decoration: underline;
+    transition: transform 0.3s ease;
+    color: #eafff6;
 }
 
+.link:hover {
+    transform: scale(1.05);
+}
+
+/* === UTILITY CLASSES === */
+.image {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.indented {
+    text-indent: 2em;  
+}
+
+.download {
+    font-size: 15pt;
+    font-family: 'Times New Roman';
+    color: #eafff6;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.download:hover {
+    transform: scale(1.05);
+}
+
+
+/* === RESPONSIVE === */
 @media only screen and (max-width: 600px) {
     .image {
         width: 200px;
     }
-    
+
     .index-grid {
         grid-template-columns: repeat(2, auto);
     }
 
-    
     .index-grid p {
         width: 75px;
     }
 
-    
     h1 {
         font-size: 24px;
     }
 
-   
-    .corner-square {
-      width: 40px;
-    height: 40px;
-    background-color: #eafff6;
-    border-radius: 15px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-    }
-
-   
-    .corner-name {
-        top: 30px;
-        left: 70px;
-        font-size: 20px;
-    }
-
-    
-.menu-lines .line {
-    width: 30px;
-    height: 3px;
-    background-color: #eafff6;
-    position: absolute;
-    right: 20px;
-    z-index: 2;
-}
-
-.line1 { top: 30px; }
-.line2 { top: 40px; }
-.line3 { top: 50px; }
-
-
-.home-text {
-    position: absolute;
-    text-decoration: none;
-    top: 30px;
-    right: 70px;
-    font-size: 20px;
-    color: #eafff6;
-    margin: 0;
-    z-index: 2;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.home-text:hover {
-  transform: scale(1.2);
-
-    /* Reduce body padding */
-    body {
-        padding: 20px;
+    .home-text:hover {
+        transform: scale(1.2);
     }
 }
