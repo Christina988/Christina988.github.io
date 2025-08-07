@@ -1,5 +1,7 @@
 function setup() {
-  createCanvas(600, 400);
+  let canvas = createCanvas(600, 400);
+  canvas.parent("sketch-container");
+ createCanvas(600, 400);
   background(0); // black background
   noLoop();
 

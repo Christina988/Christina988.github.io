@@ -11,6 +11,12 @@ body {
 .index-para {
     text-indent: 1.4em;
 }
+
+#sketch-container {
+  margin-top: 35px; /* or more */
+  text-align: center; /* optional: center horizontally */
+}
+
 body {
     background: linear-gradient(to bottom, #275040, #061018);
     background-color: #003425;
