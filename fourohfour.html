@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oops! You weren't supposed to see this.</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Your original 404-specific styles */
+        #container {
+            width: 90%;
+            height: 85%;
+            position: absolute;
+            margin: auto;
+        }
+        #fourohfour {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 7;
+            opacity: 0.5;
+            outline: solid;
+            outline-offset: 0px;
+            outline-color: rgb(242, 255, 241);
+            outline-width: 4px;
+            border-radius: 5px;
+        }
+        #fourohfour span {
+            color: rgb(242, 255, 241);
+            font-size: 12em;
+            font-weight: bold;
+        }
+        #message {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            color: rgb(242, 255, 241);
+            font-size: 1.75em; /* Reduced from 2em */
+            font-weight: bold;
+            text-align: center;
+}
+
+        #plantsbackground {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            opacity: 0.5;
+            filter: hue-rotate(350deg);
+        }
+        #vinesfore {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 15;
+            filter: brightness(60%) hue-rotate(40deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page border and outline -->
+    <div class="page-outline"></div>
+    <div class="outline"></div>
+
+    <!-- Corner square and name -->
+    <div class="corner-square"></div>
+    <p class="corner-name">Katie</p>
+
+    <!-- Hamburger menu lines -->
+    <div class="menu-lines">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+
+    <!-- Home link in top right -->
+    <a href="index.html" class="home-text">Home</a>
+
+    <!-- Your custom 404 content -->
+    <div id="container">
+        <div id="fourohfour">
+            <span>404</span>
+        </div>
+        <img src="Images/plants%20(1).PNG"
+             alt="Dark Plants"
+             width="450px"
+             height="auto"
+             id="plantsbackground"
+        >
+        <img src="Images/transparentvines.png"
+             alt="Plants"
+             width="450px"
+             height="auto"
+             id="vinesfore"
+        >
+        <div id="message">
+            Oops! You aren't supposed to see this yet!<br />
+            <a href="index.html" class="link">Click here to go back to the Index.</a>
+        </div>
+    </div>
+
+</body>
+</html>
