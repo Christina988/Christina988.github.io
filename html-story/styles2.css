@@ -58,7 +58,7 @@ a {
   cursor: pointer;
 }
 
-/* === BORDERS & OUTLINES === */
+
 .page-outline {
   position: absolute;
   top: 0;
@@ -84,7 +84,7 @@ a {
   z-index: 0;
 }
 
-/* === CORNER SQUARE AND NAME === */
+
 .corner-square {
   width: 40px;
   height: 40px;
@@ -106,7 +106,7 @@ a {
   z-index: 2;
 }
 
-/* === MENU LINES (HAMBURGER ICON) === */
+
 .menu-lines {
   position: absolute;
   top: 0;
@@ -151,7 +151,7 @@ a {
   transform: scale(1.05);
 }
 
-/* === INTERACTION CLASSES === */
+
 .hover-enlarge {
   transition: transform 0.3s ease;
 }
@@ -169,7 +169,7 @@ a {
   transform: scale(1.05);
 }
 
-/* === SYMBOL NEXT TO LINKS === */
+
 .symbol {
   font-size: 12px;
   color: rgb(142, 204, 169);
@@ -178,7 +178,7 @@ a {
   vertical-align: middle;
 }
 
-/* === GRID NAVIGATION === */
+
 .index-grid {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -204,7 +204,7 @@ a {
   width: 100%;
 }
 
-/* === UTILITY CLASSES === */
+
 .image {
   width: 300px;
   margin-left: 20px;
@@ -226,7 +226,7 @@ a {
   transform: scale(1.05);
 }
 
-/* === RESPONSIVE === */
+
 @media only screen and (max-width: 600px) {
   .image {
     width: 200px;

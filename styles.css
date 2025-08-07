@@ -4,6 +4,20 @@
     font-weight: normal;
     font-style: normal;
 }
+
+#next-link {
+  font-size: 14px;
+  color: rgb(198, 252, 198);
+  text-decoration: none;
+  z-index: 14;
+}
+
+#next-link:hover {
+  color: rgb(198, 252, 198);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 body {
   font-family: 'Times New Roman', serif;
 }
